@@ -1,0 +1,13 @@
+{% extends "postApp/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+	<h1>Post Edit</h1>
+<form method="post" enctype="multipart/form-data">	<!-- upload video form-->
+  {% csrf_token %}
+  {{ form | crispy }}
+  	<button type="submit">Submit</button>
+</form>
+
+{% endblock content %}

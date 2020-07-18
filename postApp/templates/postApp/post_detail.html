@@ -1,0 +1,76 @@
+
+{% extends 'postApp/base.html' %}
+{% load crispy_forms_tags %}
+<!-- {% load static %} -->
+{% block content %}
+	<article class="media content-section">
+		<img class="rounded-circle article-img-prof" src="{{ object.author.profile.image.url }}">
+	  <div class="media-body">
+	    <div class="article-metadata">
+	      <a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
+	      <small class="text-muted">{{ object.date_posted | date:"F d, Y"}}</small>
+
+
+	      {% if object.author == user %}
+	      <div>
+	      {% if object.image.url %}
+	      	<div class="post-image-detail">
+	      	    <img src="{{ user.post.image.url }}" width="200px" height="100" >
+			</div>
+		  {% endif %}
+			<a class="btn btn-secondary btn-sm mt-1 mb-1"href="{% url 'post-update' object.id %}">Update</a>
+			<a class="btn btn-danger btn-sm mt-1 mb-1"href="{% url 'post-delete' object.id %}">Delete</a>
+		  </div>
+
+	      {% endif %}
+	    </div>
+	    <h2 class="article-title">{{ object.title }}</h2>
+	    <h2 class="article-title">{{ object.image }}</h2>
+
+                  <!--   <video autobuffer autoloop loop controls>
+			      	<source src="/media/video.oga">
+			      	<source src="/media/video.m4v">
+			      	<object type="video/ogg" data="/media/video.oga" width="320" height="240">
+			      	<param name="src" value="/media/video.oga">
+			      	<param name="autoplay" value="false">
+			      	<param name="autoStart" value="0">
+			      	<p><a href="/media/video.oga">Download this video file.</a></p>
+			      	</object> -->
+
+	    <header class="v-header-container">
+			
+
+		<!-- 	<video name='vtest' controls  width='30%' height='20%'> 
+			      <source src="{{MEDIA_URL}}user_video/beginSo002.mp4" type="video/mp4"></source>
+		    </video>
+         add this video later ! -->
+
+		        <div class="article-img-long">
+					<p align='center'> {{ post.image }}  Image appeared ? </p>
+				</div>
+
+		    {% if instance.image %}
+	      <div class='col-sm-6 col-sm-offset-3' width='100px' height='200px'>
+	      	<img src='{{ instance.image.url }}' class="article-img"/>
+	      	<h1>{{ title }} <small> {{ instance.timestamp }}</small>got here-inst.img</h1>
+	      	{{ instance.content|linebreaks }}<br/>
+	      </div>
+	      	{% endif %}
+		   <!--  <div class="Vid-SC">
+		   	<video src="beginSo002.mp4" autoplay="true" loop="true">testing vid display</video>
+		    </div> -->
+
+			<!-- <div class="header-overlay">overlay</div> -->
+
+				<!-- <div class="header-content">
+					<h3> Hello All (style this h3 tag) </h3>
+					<p>Paragraph content that will be on all posts </p>
+					<a href="#" class="btn"> this link is on all posts</a>
+				</div> -->
+		</header>
+
+	   <!--  <h6> style this h6 tag </h6> -->
+	    <p class="article-content">{{ object.content }}</p>
+	  </div>
+	</article>
+{% endblock content %}

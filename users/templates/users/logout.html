@@ -1,0 +1,18 @@
+{% extends "postApp/base.html" %}
+
+{% block title %}
+   <title> Bye for now !</title>  
+{% endblock title %}
+
+
+{% block content %}
+	
+	<h2>You have logged out</h2>
+	
+	<div class="border-top pt-3">
+		<small class="text-muted">
+			 <a href="{% url 'login' %}"style="text-decoration:none">Log In Again ? </a>
+		</small>
+		
+	</div>		
+{% endblock content %}
