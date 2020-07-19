@@ -1,7 +1,7 @@
 
 
 
-#showcase{
+#showcase{ 
   background-image: url('../media/profile_pics/KnightOwl.jpg'); 
   background-size: cover;
   background-position: center;
@@ -71,14 +71,20 @@
 
 #section-c .box-1, #section-c .box-3{
   border-radius: 10px / 20px;
-  background:;
+  background:#52494c;
+  color: #f4e0bf;
+  font-size: 15px;
+  padding: 5px;
+
 
   border: 1px solid rgba(255, 253, 208, 1);
 }
 
 #section-c .box-2{            
   border-radius: 10px / 20px;
-  background:;
+  background:#52494c;
+  color: #f4e0bf;
+  padding:5px;
  
   border: 1px solid rgba(255, 253, 208, 1);
 }
@@ -138,10 +144,15 @@ ul {
   background: #52494c;                      
   padding: 10px 20px;               /*media content-section*/
   border: 1px solid #738276;
-  border-opacity: .1;
   border-radius: 10px;
   margin-bottom: 10px;
   padding-top: 30px;
+}
+
+.rounded-circle {
+  border-radius: 150px !important;
+  max-width:70px;
+ 
 }
 
 .article-title {
@@ -156,23 +167,29 @@ a.article-title:hover {
 .article-content {
   color : beige;
   white-space: pre-line;
+  padding-top: 10px;
+  padding-bottom: 80px;
+  height: 100px;
+  width: 300px;
+
+
 }
 
 .article-img {
-  height: 200px;
-  width: 300px;
-  margin-right: 16px;
+  height: 100px;
+  width: 200px;
+  margin-right: 16px;                       /* <------    article img*/
   border: 3px solid #738276;
 }
 .article-img-prof {
-  height: 100px;
-  width: 100px;
-  margin-right: 16px;
+  height: auto;
+  width: auto;
+  margin-right: 10px;
   border: 3px solid #738276;
 }
 
 .article-img-long {
-  height: 200px;
+  height: 100px;
   width: 300px;
   margin-right: 16px;
   border: 3px solid #738276;
@@ -195,6 +212,7 @@ a.article-title:hover {
   height: 25px;
   vertical-align: middle;
 }
+
 
 .account-img {
   height: 125px;
@@ -222,7 +240,7 @@ main.container {
 .list-group-item{
   background: #52494c;
   color: white;
-  border-bottom: 1px solid #738276;
+  border-bottom: 2px solid #738276;
 }
 
 header.site-header {
@@ -266,7 +284,8 @@ a.btn.btn-outline-info.mb-4:hover{
 }
 .footer .footer-content{
   border: 1px solid #B7A9A1;
-  height: 100px;                /* to add more elements to footer increase size */
+  height: 100px; 
+  padding-bottom: 30px;               /* to add more elements to footer increase size */
 }
 .footer .footer-bottom {
   background: #343a40;
@@ -276,16 +295,12 @@ a.btn.btn-outline-info.mb-4:hover{
   width: 99.5%;
   position: absolute;
   bottom: 0px;
-  left: 2px;
+  left: 1px;
   padding-top: 20px;
 }
 /* --------------------------------------------------------------------------------------------*/
 
 
-.post-image-detail {
-  height: 100px;
-  width: 100px;
-}
 
 
 
